@@ -21,6 +21,10 @@ namespace AppsTracker.Data.Db
                 MaxDatabaseSize = 4000,
                 DefaultLockTimeout = 10000
             };
+
+            // 🔥 Ajout pour afficher la connexion dans la console
+            Console.WriteLine("SQL CE Connection String: " + sqlBuilder.ConnectionString);
+
             return sqlBuilder;
         }
     }

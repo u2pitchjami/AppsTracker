@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Vscode\\AppsTracker\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6279DB1C-E26B-4F4B-993E-EC985417A0CF}|AppsTracker.Tracking\\AppsTracker.Tracking.csproj|d:\\vscode\\appstracker\\src\\appstracker.tracking\\limits\\appdurationcalc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6279DB1C-E26B-4F4B-993E-EC985417A0CF}|AppsTracker.Tracking\\AppsTracker.Tracking.csproj|solutionrelative:appstracker.tracking\\limits\\appdurationcalc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.domain\\apps\\appdurationoverviewusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|solutionrelative:appstracker.domain\\apps\\appdurationoverviewusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.domain\\apps\\appdurationoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|solutionrelative:appstracker.domain\\apps\\appdurationoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.domain\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB65EF2-4C7A-4D54-B05E-48BE173FCAA9}|AppsTracker.Domain\\AppsTracker.Domain.csproj|solutionrelative:appstracker.domain\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.presentation\\viewmodels\\dailyappusageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|solutionrelative:appstracker.presentation\\viewmodels\\dailyappusageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.presentation\\views\\statistics\\usageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|solutionrelative:appstracker.presentation\\views\\statistics\\usageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.presentation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91735-C353-494C-B81C-61DC9215BD7E}|AppsTracker.Presentation\\AppsTracker.Presentation.csproj|solutionrelative:appstracker.presentation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFF3918-1C83-4ACD-9FA3-87CBA98DB030}|AppsTracker.Data\\AppsTracker.Data.csproj|D:\\Vscode\\AppsTracker\\src\\appstracker.data\\db\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFF3918-1C83-4ACD-9FA3-87CBA98DB030}|AppsTracker.Data\\AppsTracker.Data.csproj|solutionrelative:appstracker.data\\db\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1958645849:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1231108287:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDurationCalc.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Tracking\\Limits\\AppDurationCalc.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Tracking\\Limits\\AppDurationCalc.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Tracking\\Limits\\AppDurationCalc.cs",
+              "RelativeToolTip": "AppsTracker.Tracking\\Limits\\AppDurationCalc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:58:20.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDurationOverviewUseCase.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\Apps\\AppDurationOverviewUseCase.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Domain\\Apps\\AppDurationOverviewUseCase.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\Apps\\AppDurationOverviewUseCase.cs",
+              "RelativeToolTip": "AppsTracker.Domain\\Apps\\AppDurationOverviewUseCase.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:57:38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDurationOverview.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\Apps\\AppDurationOverview.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Domain\\Apps\\AppDurationOverview.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\Apps\\AppDurationOverview.cs",
+              "RelativeToolTip": "AppsTracker.Domain\\Apps\\AppDurationOverview.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:57:10.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUseCase.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\IUseCase.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Domain\\IUseCase.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Domain\\IUseCase.cs",
+              "RelativeToolTip": "AppsTracker.Domain\\IUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:53:20.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DailyAppUsageViewModel.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\ViewModels\\DailyAppUsageViewModel.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Presentation\\ViewModels\\DailyAppUsageViewModel.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\ViewModels\\DailyAppUsageViewModel.cs",
+              "RelativeToolTip": "AppsTracker.Presentation\\ViewModels\\DailyAppUsageViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:43:59.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Presentation\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "AppsTracker.Presentation\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:36:56.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsageView.xaml",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\Views\\Statistics\\UsageView.xaml",
+              "RelativeDocumentMoniker": "AppsTracker.Presentation\\Views\\Statistics\\UsageView.xaml",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Presentation\\Views\\Statistics\\UsageView.xaml",
+              "RelativeToolTip": "AppsTracker.Presentation\\Views\\Statistics\\UsageView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-13T13:32:25.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DbConnectionFactory.cs",
+              "DocumentMoniker": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Data\\Db\\DbConnectionFactory.cs",
+              "RelativeDocumentMoniker": "AppsTracker.Data\\Db\\DbConnectionFactory.cs",
+              "ToolTip": "D:\\Vscode\\AppsTracker\\src\\AppsTracker.Data\\Db\\DbConnectionFactory.cs",
+              "RelativeToolTip": "AppsTracker.Data\\Db\\DbConnectionFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T12:35:42.565Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
