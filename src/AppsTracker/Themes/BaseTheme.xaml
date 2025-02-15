@@ -966,10 +966,11 @@
                         <Trigger Property="IsSelected"
                                  Value="true">
                             <Setter TargetName="border"
-                                    Property="BitmapEffect">
+                                Property="Effect">
                                 <Setter.Value>
-                                    <OuterGlowBitmapEffect GlowColor="Blue"
-                                                           GlowSize="5" />
+                                    <DropShadowEffect Color="Blue"
+                          BlurRadius="5"
+                          ShadowDepth="0"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>

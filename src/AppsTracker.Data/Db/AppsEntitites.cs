@@ -116,5 +116,7 @@ namespace AppsTracker.Data.Db
         public DbSet<Uzer> Users { get; set; }
         public DbSet<Window> Windows { get; set; }
         public DbSet<Usage> Usages { get; set; }
+        public DbSet<Recap> Recaps { get; set; }
+
     }
 }

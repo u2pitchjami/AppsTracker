@@ -155,9 +155,12 @@ namespace AppsTracker.Tests
                 new Func<Tuple<DailyAppUsageViewModel, Action>>(
                     () => new Tuple<DailyAppUsageViewModel, Action>(
                         new DailyAppUsageViewModel(
-                            new Mock<IUseCase<AppDurationOverview>>().Object,
-                            mediator),
-                            ExportFactoryContextRelease));
+                            new Mock<IUseCase<AppDurationOverview>>().Object, // Mock du UseCase
+                            mediator,  // Paramètre déjà existant
+                            new Mock<IRepository>().Object, // ✅ Ajout du Mock pour repository
+                            new Mock<ITrackingService>().Object // ✅ Ajout du Mock pour trackingService
+                        ),
+                        ExportFactoryContextRelease));
 
             return new ExportFactory<DailyAppUsageViewModel>(tupleFactory);
         }

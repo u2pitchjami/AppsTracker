@@ -16,7 +16,7 @@
 /src/AppsTracker.Data/bin
 /src/AppsTracker.Data/obj
 /src/AppsTracker.Common/obj
-/src/.vs/AppsTracker/v14
+/src/.vs/
 /src/AppsTracker/AppsTracker.csproj.user
 /src/AppsTracker.Domain/bin
 /src/AppsTracker.Domain/obj

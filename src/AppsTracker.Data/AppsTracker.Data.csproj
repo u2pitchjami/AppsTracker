@@ -126,9 +126,15 @@
   <ItemGroup>
     <Compile Include="Db\AppsEntitites.cs" />
     <Compile Include="Db\DbConnectionFactory.cs" />
+    <Compile Include="Migrations\202502141812336_InitialCreate.cs" />
+    <Compile Include="Migrations\202502141812336_InitialCreate.Designer.cs">
+      <DependentUpon>202502141812336_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aplication.cs" />
     <Compile Include="Models\AppCategory.cs" />
     <Compile Include="Models\AppLimit.cs" />
+    <Compile Include="Models\Recap.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Screenshot.cs" />
@@ -150,7 +156,11 @@
       <Name>AppsTracker.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202502141812336_InitialCreate.resx">
+      <DependentUpon>202502141812336_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

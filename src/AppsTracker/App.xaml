@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:AppsTracker;assembly=AppsTracker.Presentation"
              xmlns:converters="clr-namespace:AppsTracker;assembly=AppsTracker.Presentation"
              xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
-             xmlns:utils="clr-namespace:AppsTracker.Utils;assembly=AppsTracker.Presentation"
+             
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity">
 
     <Application.Resources>
@@ -938,10 +938,11 @@
                                 <Trigger Property="IsSelected"
                                          Value="true">
                                     <Setter TargetName="border"
-                                            Property="BitmapEffect">
+        Property="Effect">
                                         <Setter.Value>
-                                            <OuterGlowBitmapEffect GlowColor="Blue"
-                                                                   GlowSize="5" />
+                                            <DropShadowEffect Color="Blue"
+                          BlurRadius="5"
+                          ShadowDepth="0"/>
                                         </Setter.Value>
                                     </Setter>
                                 </Trigger>

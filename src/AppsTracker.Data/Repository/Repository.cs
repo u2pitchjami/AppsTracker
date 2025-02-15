@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -190,12 +191,17 @@ namespace AppsTracker.Data.Repository
 
         public void SaveNewEntity<T>(T item) where T : class
         {
+            Debug.WriteLine($">>> 🛠 SaveNewEntity appelé pour : {item}");
+
             using (var context = new AppsEntities())
             {
                 context.Set<T>().Add(item);
                 context.SaveChanges();
             }
+
+            Debug.WriteLine($">>> ✅ SaveNewEntity terminé pour : {item}");
         }
+
 
         public async Task SaveNewEntityAsync<T>(T item) where T : class
         {

@@ -11,6 +11,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -21,9 +22,12 @@ using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using AppsTracker.Tracking.Services;
 using AppsTracker.Common.Logging;
 using AppsTracker.Controllers;
 using AppsTracker.Service;
+using AppsTracker.Data.Repository;
+using AppsTracker.Domain.Tracking;
 
 [assembly: InternalsVisibleTo("AppsTracker.Tests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
@@ -35,8 +39,22 @@ namespace AppsTracker
         private readonly ApplicationController applicationController;
         private readonly CompositionContainer container;
 
+        private RecapTimerService recapTimerService;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            IRepository repository = new Repository(); // Adapter en fonction de ton projet
+            ITrackingService trackingService = null; // Adapter en fonction de ton projet
+
+            // 🛠️ Lancement automatique du Timer
+            recapTimerService = new RecapTimerService(repository, trackingService);
+        }
+
         public App(ReadOnlyCollection<string> args)
         {
+            Debug.WriteLine(">>> AppsTracker a démarré !");
             ProfileOptimization.SetProfileRoot(Assembly.GetEntryAssembly().Location);
             ProfileOptimization.StartProfile("AppsTrackerProfile");
 

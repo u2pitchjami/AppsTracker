@@ -127,6 +127,7 @@
     <Compile Include="Screenshots\IScreenshotTracker.cs" />
     <Compile Include="Screenshots\ScreenshotFactory.cs" />
     <Compile Include="Screenshots\ScreenshotTracker.cs" />
+    <Compile Include="Services\RecapTimerService.cs" />
     <Compile Include="TrackingStatus.cs" />
     <Compile Include="Usage\IdleNotifier.cs" />
     <Compile Include="Usage\IdleTimeWatcher.cs" />

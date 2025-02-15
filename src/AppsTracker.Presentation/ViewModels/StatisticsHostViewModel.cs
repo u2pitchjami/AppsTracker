@@ -7,12 +7,13 @@
 #endregion
 
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.Windows.Input;
 using AppsTracker.MVVM;
 
 namespace AppsTracker.ViewModels
 {
-    [Export] 
+    [Export]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public sealed class StatisticsHostViewModel : HostViewModel
     {
@@ -60,48 +61,60 @@ namespace AppsTracker.ViewModels
 
         [ImportingConstructor]
         public StatisticsHostViewModel(ExportFactory<UserStatsViewModel> userStatsVMFactory,
-                                       ExportFactory<AppStatsViewModel> appStatsVMFactory,
-                                       ExportFactory<DailyAppUsageViewModel> dailyAppUsageVMFactory,
-                                       ExportFactory<ScreenshotsStatsViewModel> screenshotStatsVMFactory,
-                                       ExportFactory<CategoryStatsViewModel> categoryStatsVMFactory)
+                               ExportFactory<AppStatsViewModel> appStatsVMFactory,
+                               ExportFactory<DailyAppUsageViewModel> dailyAppUsageVMFactory,
+                               ExportFactory<ScreenshotsStatsViewModel> screenshotStatsVMFactory,
+                               ExportFactory<CategoryStatsViewModel> categoryStatsVMFactory)
         {
             RegisterChild(() => ProduceViewModel(userStatsVMFactory));
             RegisterChild(() => ProduceViewModel(appStatsVMFactory));
             RegisterChild(() => ProduceViewModel(dailyAppUsageVMFactory));
             RegisterChild(() => ProduceViewModel(screenshotStatsVMFactory));
             RegisterChild(() => ProduceViewModel(categoryStatsVMFactory));
-            
+
             SelectedChild = GetChild(typeof(UserStatsViewModel));
+
+            // 🔥 Ajout pour forcer le chargement de DailyAppUsageViewModel
+            Debug.WriteLine(">>> StatisticsHostViewModel chargé");
+
+            var dailyUsageVM = GetChild(typeof(DailyAppUsageViewModel)) as DailyAppUsageViewModel;
+            if (dailyUsageVM != null)
+            {
+                Debug.WriteLine(">>> DailyAppUsageViewModel instancié via StatisticsHostViewModel");
+
+                dailyUsageVM.AppsList.Reload(); // ✅ Force le chargement des données
+                Debug.WriteLine(">>> AppsList a été rechargée.");
+            }
+            else
+            {
+                Debug.WriteLine(">>> ERREUR : Impossible d'instancier DailyAppUsageViewModel !");
+            }
         }
-
-
         private void GoToUserStats()
         {
             SelectedChild = GetChild<UserStatsViewModel>();
         }
-
 
         private void GoToAppStats()
         {
             SelectedChild = GetChild<AppStatsViewModel>();
         }
 
-
         private void GoToDailyAppUsage()
         {
             SelectedChild = GetChild<DailyAppUsageViewModel>();
         }
-
 
         private void GoToScreenshotStats()
         {
             SelectedChild = GetChild<ScreenshotsStatsViewModel>();
         }
 
-
         private void GoToCategoryStats()
         {
             SelectedChild = GetChild<CategoryStatsViewModel>();
         }
+
+
     }
 }
