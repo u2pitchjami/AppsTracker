@@ -1,0 +1,78 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f19c3cf3-5700-42b9-b7b8-d17e45df4f85</ProjectGuid>
+    <OutputType>msi</OutputType>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>AppsTracker2025.aip</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <AssemblyName>AppsTracker2025</AssemblyName>
+    <Name>AppsTracker2025</Name>
+    <RootNamespace>AppsTracker2025</RootNamespace>
+    <LoadFromTemplate>
+    </LoadFromTemplate>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' ">
+    <DebugAppId />
+    <DebugArchitecture />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppsTracker2025.aip">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppsTracker.Common\AppsTracker.Common.csproj">
+      <Name>AppsTracker.Common</Name>
+      <Project>{0c42bfba-8444-4789-bd3f-65f84ccd94ed}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\AppsTracker.Data\AppsTracker.Data.csproj">
+      <Name>AppsTracker.Data</Name>
+      <Project>{dfff3918-1c83-4acd-9fa3-87cba98db030}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\AppsTracker.Domain\AppsTracker.Domain.csproj">
+      <Name>AppsTracker.Domain</Name>
+      <Project>{8bb65ef2-4c7a-4d54-b05e-48be173fcaa9}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\AppsTracker.Presentation\AppsTracker.Presentation.csproj">
+      <Name>AppsTracker.Presentation</Name>
+      <Project>{68f91735-c353-494c-b81c-61dc9215bd7e}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\AppsTracker.Tracking\AppsTracker.Tracking.csproj">
+      <Name>AppsTracker.Tracking</Name>
+      <Project>{6279db1c-e26b-4f4b-993e-ec985417a0cf}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\AppsTracker\AppsTracker.csproj">
+      <Name>AppsTracker</Name>
+      <Project>{ed886551-a8b3-492d-acec-fe2df0b484f7}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;LocalizedResourcesOutput;References</OutputsToImport>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="Build">
+    <Error Text="This project requires Advanced Installer tool. Please download it from https://www.advancedinstaller.com/download.html" />
+  </Target>
+  <Target Name="Rebuild">
+    <Error Text="This project requires Advanced Installer tool. Please download it from https://www.advancedinstaller.com/download.html" />
+  </Target>
+  <Target Name="Clean">
+  </Target>
+  <Target Name="ResolveAssemblyReferences">
+  </Target>
+  <Import Condition="'$(AdvancedInstallerMSBuildTargets)' != ''" Project="$(AdvancedInstallerMSBuildTargets)\AdvInstExtTasks.Targets" />
+  <Import Condition="('$(AdvancedInstallerMSBuildTargets)' == '') And (Exists('$(MSBuildExtensionsPath32)\Caphyon\Advanced Installer\AdvInstExtTasks.Targets'))" Project="$(MSBuildExtensionsPath32)\Caphyon\Advanced Installer\AdvInstExtTasks.Targets" />
+</Project>

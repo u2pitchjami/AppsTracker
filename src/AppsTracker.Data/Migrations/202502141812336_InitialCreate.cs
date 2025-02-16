@@ -129,8 +129,11 @@
                         RecapID = c.Int(nullable: false, identity: true),
                         Timestamp = c.DateTime(nullable: false),
                         UserID = c.Int(nullable: false),
+                        UserName = c.String(nullable: false, maxLength: 100),
                         ApplicationID = c.Int(nullable: false),
+                        ApplicationName = c.String(nullable: false, maxLength: 250),
                         WindowID = c.Int(nullable: false),
+                        WindowTitle = c.String(nullable: false, maxLength: 1000),
                         Duration = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.RecapID);

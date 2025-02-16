@@ -11,8 +11,11 @@ namespace AppsTracker.Data.Models
         public int RecapID { get; set; }
         public DateTime Timestamp { get; set; }
         public int UserID { get; set; }
+        public string UserName { get; set; }
         public int ApplicationID { get; set; }
+        public string ApplicationName { get; set; }
         public int WindowID { get; set; }
+        public string WindowTitle { get; set; }
         public long Duration { get; set; }
     }
 }

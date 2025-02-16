@@ -67,25 +67,38 @@ namespace AppsTracker.Domain.Apps
                         int userID = (userQuery != null && userQuery.Any())
                             ? userQuery.Select(u => u.UserID).FirstOrDefault()
                             : -1; // 🔥 Valeur par défaut si aucun UserID trouvé
+                        string userName = repository.GetFiltered<Uzer>(u => u.ID == userID)  // ✅ Corrigé avec "Uzer"
+                           .Select(u => u.Name)  // ✅ Correct
+                           .FirstOrDefault() ?? "Unknown";
                         Debug.WriteLine($">>> UserID trouvé : {userID}");
-
+                        Debug.WriteLine($">>> UserName trouvé : {userName}");
                         Debug.WriteLine($">>> Vérification avant recherche ApplicationID : WindowID = {data.log.WindowID}");
                         var windowQuery = repository.GetFiltered<Window>(w => w.ID == data.log.WindowID);
                         if (windowQuery == null || !windowQuery.Any())
                         {
                             Debug.WriteLine($">>> ⚠️ PROBLÈME : Aucune entrée trouvée dans Windows pour WindowID = {data.log.WindowID}");
                         }
+                        string windowTitle = repository.GetFiltered<Window>(w => w.ID == data.log.WindowID)
+                           .Select(w => w.Title)  // ✅ Correct
+                           .FirstOrDefault() ?? "Unknown";
                         int appID = (windowQuery != null && windowQuery.Any())
                             ? windowQuery.Select(w => w.ApplicationID).FirstOrDefault()
                             : -1; // 🔥 Valeur par défaut si aucun ApplicationID trouvé
+                        string appName = repository.GetFiltered<Aplication>(a => a.ID == appID)  // ✅ Corrigé avec "Aplication"
+                           .Select(a => a.Name)  // ✅ Correct
+                           .FirstOrDefault() ?? "Unknown";
                         Debug.WriteLine($">>> ApplicationID trouvé : {appID}");
+                        Debug.WriteLine($">>> ApplicationName trouvé : {appName}");
 
                         return new Recap
                         {
                             Timestamp = data.slot.Slot.AddMinutes(10),
                             UserID = userID,
+                            UserName = userName,  // ✅ Corrigé avec les bons champs
                             ApplicationID = appID,
-                            WindowID = data.log.WindowID, // 🔥 Correction ici pour éviter -1
+                            ApplicationName = appName,  // ✅ Corrigé avec les bons champs
+                            WindowID = data.log.WindowID,
+                            WindowTitle = windowTitle,  // ✅ Corrigé avec les bons champs
                             Duration = data.slot.Duration
                         };
                     })
@@ -94,8 +107,11 @@ namespace AppsTracker.Domain.Apps
                     {
                         Timestamp = g.Key.Timestamp,
                         UserID = g.Key.UserID,
+                        UserName = g.First().UserName,  // ✅ On prend le premier UserName du groupe
                         ApplicationID = g.Key.ApplicationID,
+                        ApplicationName = g.First().ApplicationName,  // ✅ On prend le premier ApplicationName du groupe
                         WindowID = g.Key.WindowID,
+                        WindowTitle = g.First().WindowTitle,
                         Duration = g.Sum(r => r.Duration) // 🔥 Consolidation des durées
                     })
                     .ToList();
@@ -113,8 +129,11 @@ namespace AppsTracker.Domain.Apps
     {
         Timestamp = g.Key.Tranche,
         UserID = g.Key.UserID,
+        UserName = g.First().UserName,
         ApplicationID = g.Key.ApplicationID,
+        ApplicationName = g.First().ApplicationName,
         WindowID = g.Key.WindowID,
+        WindowTitle = g.First().WindowTitle,
         Duration = g.Select(r => r.Duration).Distinct().Sum() // 🔥 Évite les cumuls de périodes
     })
     .ToList();
@@ -127,6 +146,9 @@ namespace AppsTracker.Domain.Apps
                         && r.UserID == entry.UserID
                         && r.ApplicationID == entry.ApplicationID
                         && r.WindowID == entry.WindowID
+                        && !string.IsNullOrEmpty(r.UserName)
+                        && !string.IsNullOrEmpty(r.ApplicationName)
+                        && !string.IsNullOrEmpty(r.WindowTitle)
                     ).Any();
                     Debug.WriteLine($">>> 🏆 Recap : Timestamp = {entry.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")}, WindowID = {entry.WindowID}, Duration = {entry.Duration} sec");
 

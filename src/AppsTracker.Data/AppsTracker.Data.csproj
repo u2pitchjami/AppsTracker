@@ -130,6 +130,10 @@
     <Compile Include="Migrations\202502141812336_InitialCreate.Designer.cs">
       <DependentUpon>202502141812336_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502161527206_UpdateRecapTable.cs" />
+    <Compile Include="Migrations\202502161527206_UpdateRecapTable.Designer.cs">
+      <DependentUpon>202502161527206_UpdateRecapTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aplication.cs" />
     <Compile Include="Models\AppCategory.cs" />
@@ -159,6 +163,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202502141812336_InitialCreate.resx">
       <DependentUpon>202502141812336_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502161527206_UpdateRecapTable.resx">
+      <DependentUpon>202502161527206_UpdateRecapTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
